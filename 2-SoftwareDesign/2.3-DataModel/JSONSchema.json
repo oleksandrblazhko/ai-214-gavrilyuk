@@ -1,0 +1,142 @@
+{
+  "title": "Record of user",
+  "description": "This document records the details of a user",
+  "type": "object",
+  "properties": {
+    "Користувачі": {
+      "description": "Користувач id",
+      "type": "object",
+      "properties": {
+        "Користувач": {
+          "type": "object",
+          "properties": {
+            "login": {
+              "description": "Логін користувача",
+              "type": "string"
+            },
+            "password": {
+              "description": "Пароль користувача",
+              "type": "string"
+            },
+            "Повне ім'я": {
+              "description": "Повне ім'я користувача",
+              "type": "string"
+            },
+            "Нікнейм": {
+              "description": "Псевдонім користувача",
+              "type": "string"
+            }
+          },
+          "required": [
+            "login",
+            "password",
+            "Повне ім'я",
+            "нікнейм"
+          ]
+        }
+      },
+      "required": [
+        "Користувач id"
+      ]
+    },
+    "Запити на отримання списку статтей": {
+      "description": "Запит на отримання списку статтей id",
+      "type": "object",
+      "properties": {
+        "Запит на отримання списку статтей": {
+          "type": "object",
+          "properties": {
+            "Кількість статтей": {
+              "description": "Кількість статтей",
+              "type": "number"
+            },
+            "Номер статті з якої починати": {
+              "description": "Номер статті з якої починати",
+              "type": "number"
+            }
+          },
+          "required": [
+            "Кількість статтей",
+            "Номер статті з якої починати"
+          ]
+        }
+      },
+      "required": [
+        "Запит на отримання списку статтей id"
+      ]
+    },
+    "Список доступних статтей": {
+      "description": "Список доступних статтей id",
+      "type": "object",
+      "properties": {
+        "Список номерів статтей": {
+          "type": "object",
+          "properties": {
+            "список з номерами статтей": {
+              "description": "список з номерами статтей",
+              "type": "number[]"
+            },
+            "Список назв статтей": {
+              "description": "Список назв статтей",
+              "type": "string[]"
+            },
+            "Список авторів статтей": {
+              "description": "Список авторів статтей",
+              "type": "string[]"
+            }
+          },
+          "required": [
+            "список з номерами статтей",
+            "Список назв статтей",
+            "Список авторів статтей"
+          ]
+        },
+        "required": [
+          "Список доступних статтей id"
+        ]
+      }
+    },
+    "Сховище статтей": {
+      "description": "Сховище статтей",
+      "type": "object",
+      "properties": {
+        "Сховище статтей id": {
+          "type": "object",
+          "properties": {
+            "Статті": {
+              "description": "Список об'ектів классу Стаття",
+              "type": "Стаття"
+            },
+            "required": [
+              "Статті"
+            ]
+          }
+        },
+        "required": [
+          "Сховище статтей id"
+        ]
+      }
+    },
+    "Запит на отримання конкретної статті": {
+      "description": "Запит на отримання конкретної статті",
+      "type": "object",
+      "properties": {
+        "Запит на отримання конкретної статті id": {
+          "type": "object",
+          "properties": {
+            "Номер статті": {
+              "description": "Номер статті яку серверу треба прислати",
+              "type": "number"
+            }
+          },
+          "required": [
+            "Номер статті"
+          ]
+        },
+        "required": [
+          "Запит на отримання конкретної статті id"
+        ]
+      }
+    }
+  }
+}
