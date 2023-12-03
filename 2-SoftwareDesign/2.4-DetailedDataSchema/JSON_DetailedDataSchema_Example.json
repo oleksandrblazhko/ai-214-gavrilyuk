@@ -1,0 +1,218 @@
+{
+  {
+    "title": "Record",
+    "description": "This document records the details of a user",
+    "type": "object",
+    "properties": {
+      "Users": {
+        "description": "User details",
+        "type": "object",
+        "properties": {
+          "user id": {
+            "type": "number",
+            "minimum": 0,
+            "properties": {
+              "login": {
+                "description": "Логін користувача",
+                "type": "string",
+                "pattern": "^[a-zA-Z][a-zA-Z0-9._-]{6,25}$"
+              },
+              "password": {
+                "description": "Пароль користувача",
+                "type": "string",
+                "pattern": "^(?=.*[a-z])(?=.*[A-Z])[A-Za-z!@#$%^&*()_+]{6,25}$"
+              },
+              "fullName": {
+                "description": "Full name",
+                "type": "string",
+                "format": ""
+              },
+              "userName": {
+                "description": "Нікнейм користувача",
+                "type": "string",
+                "minLength": 6,
+                "maxLength": 20
+              }
+            },
+            "required": [
+              "login",
+              "password",
+              "profilePhoto",
+              "email",
+              "userName"
+            ]
+          }
+        },
+        "required": [
+          "user id"
+        ]
+      },
+      "articlesListRequests": {
+        "description": "Request to get some articles",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "minimum": 0,
+            "properties": {
+              "count": {
+                "description": "Count of articles",
+                "type": "number",
+                "minimum": 0
+              },
+              "startsFrom": {
+                "description": "start article id",
+                "type": "number",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "specialization",
+              "user id"
+            ]
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "listsOfAwailableArticles": {
+        "description": "list of articles details for choosed user",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "minimum": 0,
+            "properties": {
+              "listOfArticlesIDs": {
+                "description": "Текст запиту або ціль запиту ",
+                "type": "listOfNumbers"
+              },
+              "listOfArticlesNames": {
+                "description": "Дата створення запиту",
+                "type": "listOfStrings"
+              },
+              "user id": {
+                "description": "user id",
+                "type": "number",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "purpose",
+              "date",
+              "user id"
+            ]
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "RequestToGetArticle": {
+        "description": "RequestToGetArticle",
+        "type": "object",
+        "properties": {
+          "req_id": {
+            "type": "number",
+            "minimum": 0,
+            "properties": {
+              "article_id": {
+                "description": "Номер запит,на який йде відповідь",
+                "type": "number",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "response text",
+              "date",
+              "request id"
+            ]
+          }
+        },
+        "required": [
+          "req_id"
+        ]
+      },
+      "Article": {
+        "description": "article object",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "minimum": 0,
+            "properties": {
+              "article_id": {
+                "description": "num of article",
+                "type": "int"
+              },
+              "Author": {
+                "description": "Article author nick",
+                "type": "string"
+              },
+              "ArticleName": {
+                "description": "article name",
+                "type": "string"
+              },
+              "articleContent": {
+                "description": "text",
+                "type": "string"
+              },
+              "user id": {
+                "description": "Користувач,який зробив витрату",
+                "type": "number",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "purpose",
+              "spent money",
+              "date",
+              "user id"
+            ]
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "Orders": {
+        "description": "Users orders",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "minimum": 0,
+            "properties": {
+              "Orderers_nick": {
+                "description": "Orderers_nick",
+                "type": "string"
+              },
+              "list_of_orders": {
+                "description": "list or ordered things ids",
+                "type": "listOfNUums"
+              }
+            },
+            "required": [
+              "id"
+            ]
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "Order_maded_callback": {
+        "description": "Order maded callback",
+        "type": "object",
+        "properties": {
+          "ordered_callback_id": {
+            "type": "int"
+          }
+        },
+        "required": [
+          "ordered_callback_id"
+        ]
+      }
+    }
+  }
