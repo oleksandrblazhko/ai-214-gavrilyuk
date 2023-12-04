@@ -1,2 +1,2 @@
 ![UseCasePuml](https://www.planttext.com/api/plantuml/png/XP2z3i8m38HtFuL7EXJs3gYTklFp057gjXOX4Ou30iIxanOMbkBDlhll9DTHZMWwEm1bTOJ7IDP4mjPSvUuudS1HhwW1XOTHiMCXgnmy6Aj1iCe1gG2cg_539kn3hpSZX4y0p9E-nDME1eugPaflcgHZ47xCM_5ht9FlKEYIAEeXjAIDA5j7iPY9dqeiox_89HtNswKch92zTQaZU07KsJS_2Tu0)
-![](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/oleksandrblazhko/ai-214-gavrilyuk/lab_7/2-SoftwareDesign/2.7-PlantUML/UML-UseCase.puml)
+![Link to run code on http://www.plantuml.com/](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/oleksandrblazhko/ai-214-gavrilyuk/lab_7/2-SoftwareDesign/2.7-PlantUML/UML-UseCase.puml)
