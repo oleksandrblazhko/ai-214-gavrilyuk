@@ -1,6 +1,6 @@
 @startuml
 
-title Usecase Miroshnichenko
+title Usecase Gavryliuk
 left to right direction
 actor :User:
 
