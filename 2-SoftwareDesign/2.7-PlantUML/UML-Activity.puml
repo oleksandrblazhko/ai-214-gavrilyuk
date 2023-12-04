@@ -1,0 +1,24 @@
+@startuml
+
+title Activity Diagram Gavryliuk V.S.
+
+start
+:User going to forum;
+:The program requesting from server articles from 0 to 10; 
+if (one or more requested articles returned?) then (yes)
+   if (all requested articles returned) then (yes)
+       :The amount of money is greater than 0;
+       if ("Next page" button pressed) then (yes)
+      :The program requesting from server articles from 10 to 20; 
+      else (no)
+      endif
+   else (no)
+       :"Next page" button disables;
+   endif
+else (no)
+   :"no articles found" message appears;
+endif
+
+stop
+
+@enduml
