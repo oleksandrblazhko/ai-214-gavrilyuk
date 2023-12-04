@@ -1,0 +1,47 @@
+@startuml
+
+hide circle
+title UML Concept Classes
+
+Class User {
+    login
+    password
+    fullName
+    nickName
+}
+
+CLass Cart {
+    toOrderProducts
+}
+
+Class Order {
+    requestText
+    date
+}
+
+Class Manager {
+}
+
+Class Master {
+}
+
+Class Worker {
+    Ligin
+    password
+    JobPosition
+}
+
+Worker <|-- Manager
+
+Worker <|-- Master
+
+Cart o-- User
+
+User"1" --> "*"Order : send
+
+Manager"1" --> "*"Order : review
+
+Master"1" --> "*"Order : gets
+
+@enduml
+

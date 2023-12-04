@@ -1,0 +1,16 @@
+@startuml
+
+title Usecase Gavryliuk
+left to right direction
+actor :User:
+
+rectangle Software {
+
+    usecase (Registration/Authorization)
+    usecase (Send requestToGetArticles)
+
+   :User: -- (Registration/Authorization)
+   (Registration/Authorization) .> (Send requestToGetArticles) : include
+}
+
+@enduml

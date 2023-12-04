@@ -1,0 +1,45 @@
+@startjson
+
+title JSON Data
+{
+  "User": {
+    "login": "Dude",
+    "password": "12345678",
+    "email": "email_address@gmail.com",
+    "userName": "TheDude"
+    
+  },
+  "RequestToGetArticles": {
+      "ArticleCount": "5",
+      "startsFrom": "2"
+  },
+    "ArticlesList": {
+      "articlesNumber": "3",
+      "articlesNames": "[\"A1\",\"A2\",\"A3\"]]",
+      "articlesAuthors": "[\"Author1\",\"Author2\",\"Author1\"]]"
+    },
+    "Order": {
+      "OrderNum":"1",
+      "Orderer": "TheDude",
+      "OrderedProductsIDs": "[1,2,5,3]"
+    },
+    "Article": [
+      {
+      "Article_Num":"1",
+      "Author": "TheDude",
+      "Name": "Article Main",
+      "Content": "Afsdfdf sgsdf sdf gh hh dghdfg dfd"
+      },
+      {
+      "Article_Num":"2",
+      "Author": "TheDude",
+      "Name": "Article?",
+      "Content": "Afsdfdf hjk fghg hjk hjklloiu ou"
+      }]
+
+    
+  
+}
+
+
+@endjson
